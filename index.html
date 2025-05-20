@@ -1,152 +1,171 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Links do Meetup FinOps</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinOps Brazil - Links Importantes</title>
   <style>
-    :root {
-      --verde: #49C794;
-      --azul: #0080B0;
-      --preto: #000000;
-      --branco: #ffffff;
-      --cinza: #f8f8f8;
-    }
-
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--branco);
-      color: var(--preto);
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #000;
     }
 
     header {
       background-color: #182630;
-      color: var(--branco);
+      color: white;
+      padding: 30px 20px;
       text-align: center;
-      padding: 3rem 1rem 2rem;
-    }
-
-    header img {
-      width: 100px;
-      margin-bottom: 1rem;
     }
 
     header h1 {
-      font-size: 2rem;
       margin: 0;
-      font-weight: 600;
+      font-size: 2rem;
+      color: #49C794;
     }
 
-    .intro {
-      max-width: 900px;
-      margin: 2rem auto 0;
-      text-align: center;
-      padding: 0 1rem;
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .link-card {
+      background-color: #fff;
+      border-left: 8px solid #0080B0;
+      padding: 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .link-card:hover {
+      transform: scale(1.02);
+    }
+
+    .link-card a {
+      text-decoration: none;
+      color: #182630;
+      font-weight: bold;
       font-size: 1.1rem;
-      color: #333;
     }
 
-    .grid-container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .card {
-      background-color: var(--cinza);
-      border-left: 6px solid var(--azul);
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.25rem;
-      color: var(--azul);
-    }
-
-    .card p {
-      margin-bottom: 1rem;
+    .link-card p {
+      margin-top: 6px;
       color: #555;
     }
 
-    .card a {
-      display: inline-block;
-      background-color: var(--verde);
-      color: var(--branco);
-      padding: 0.6rem 1rem;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .card a:hover {
-      background-color: #3bb07a;
-    }
-
-    footer {
+    .event-carousel {
+      background-color: #182630;
+      padding: 40px 20px;
+      color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: #f0f0f0;
-      font-size: 0.9rem;
-      color: #666;
+    }
+
+    .event-carousel h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #49C794;
+    }
+
+    .carousel {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 16px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 10px;
+    }
+
+    .card {
+      background-color: #ffffff10;
+      border-radius: 16px;
+      min-width: 250px;
+      max-width: 250px;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card p {
+      padding: 10px;
+      font-size: 0.95rem;
+      color: #ffffff;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <img src="https://www.finops.org/wp-content/uploads/2024/03/FinOps-Foundation-Meta.png" alt="FinOps Foundation Logo">
-    <h1>Links do Meetup FinOps</h1>
+    <h1>🌐 Links Importantes - FinOps Meetups</h1>
+    <p>Confira os principais links que usamos durante os meetups da comunidade FinOps Brasil.</p>
   </header>
 
-  <div class="intro">
-    Acesse abaixo os principais links mencionados durante nossos encontros e faça parte da comunidade global de FinOps!
+  <div class="container">
+    <div class="link-card">
+      <a href="https://www.finops.org/" target="_blank">🌎 Site oficial da FinOps Foundation</a>
+      <p>Conheça os pilares da fundação e os recursos disponíveis.</p>
+    </div>
+
+    <div class="link-card">
+      <a href="https://www.finops.org/join/" target="_blank">👥 Torne-se Membro da FinOps Foundation</a>
+      <p>Junte-se à comunidade global e acesse conteúdos exclusivos.</p>
+    </div>
+
+    <div class="link-card">
+      <a href="https://www.finops.org/speakers/" target="_blank">🎤 Seja um Speaker</a>
+      <p>Compartilhe suas experiências em eventos oficiais e meetups.</p>
+    </div>
+
+    <div class="link-card">
+      <a href="https://www.finops.org/sponsors/" target="_blank">💼 Torne-se um Patrocinador</a>
+      <p>Fortaleça o movimento FinOps apoiando os eventos e ações da comunidade.</p>
+    </div>
   </div>
 
-  <main class="grid-container">
-
-    <div class="card">
-      <h2>🌍 Site Oficial da FinOps Foundation</h2>
-      <p>Conheça a organização, sua missão, framework e iniciativas globais.</p>
-      <a href="https://www.finops.org/" target="_blank">Acessar o site</a>
+  <section class="event-carousel">
+    <h2>📅 Próximos Eventos da Comunidade</h2>
+    <div class="carousel">
+      <div class="card">
+        <a href="https://events.finops.org/event/belo-horizonte-finops-meetup-july/" target="_blank">
+          <img src="https://events.finops.org/wp-content/uploads/2025/05/meetup-featured-belohorizonte.png" alt="Belo Horizonte Meetup">
+          <p>Belo Horizonte FinOps Meetup - Julho</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://x.finops.org/" target="_blank">
+          <img src="https://events.finops.org/wp-content/uploads/2024/11/X25-Featured-v1.png" alt="FinOps X">
+          <p>FinOps X - Site Oficial</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://events.finops.org/event/brazil-july-finops-foundation-summit/" target="_blank">
+          <img src="https://events.finops.org/wp-content/uploads/2025/01/Virtual-Summit-Brazil-July25-Featured-v1.png" alt="Summit Julho">
+          <p>Brazil July FinOps Foundation Summit</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://x.finops.org/x-days/" target="_blank">
+          <img src="https://events.finops.org/wp-content/uploads/2025/02/X-Day-SP.png" alt="X Days">
+          <p>FinOps X Days</p>
+        </a>
+      </div>
     </div>
-
-    <div class="card">
-      <h2>🤝 Torne-se Membro</h2>
-      <p>Participe da comunidade, acesse materiais exclusivos e contribua com o movimento.</p>
-      <a href="https://www.finops.org/get-involved/" target="_blank">Quero fazer parte</a>
-    </div>
-
-    <div class="card">
-      <h2>🎤 Seja um Speaker</h2>
-      <p>Compartilhe suas experiências e inspire outros profissionais da área.</p>
-      <a href="https://www.finops.org/community/speakers/" target="_blank">Quero palestrar</a>
-    </div>
-
-    <div class="card">
-      <h2>💼 Seja um Patrocinador</h2>
-      <p>Apoie eventos e iniciativas da comunidade FinOps no Brasil e no mundo.</p>
-      <a href="https://www.finops.org/about/partners/" target="_blank">Quero patrocinar</a>
-    </div>
-
-  </main>
-
-  <footer>
-    Página feita com ❤️ para conectar a comunidade FinOps durante os meetups.  
-    <br/>#FinOps #Meetup #Comunidade
-  </footer>
-
+  </section>
 </body>
+
 </html>
