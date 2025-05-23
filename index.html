@@ -32,28 +32,32 @@
       padding: 0 20px;
     }
 
-    .link-card {
+    a.link-card {
+      display: block;
       background-color: #fff;
       border-left: 8px solid #0080B0;
       padding: 16px;
       margin-bottom: 20px;
       border-radius: 8px;
       transition: transform 0.2s;
-    }
-
-    .link-card:hover {
-      transform: scale(1.02);
-    }
-
-    .link-card a {
       text-decoration: none;
-      color: #182630;
-      font-weight: bold;
+      color: inherit;
+    }
+
+    a.link-card:hover {
+      transform: scale(1.02);
+      background-color: #f0f0f0;
+    }
+
+    .link-card strong {
+      display: block;
       font-size: 1.1rem;
+      margin-bottom: 6px;
+      font-weight: bold;
     }
 
     .link-card p {
-      margin-top: 6px;
+      margin: 0;
       color: #555;
     }
 
@@ -125,39 +129,40 @@
   </header>
 
   <div class="container">
-    <div class="link-card">
-      <a href="https://www.finops.org/" target="_blank">🌎 Site oficial</a>
+    <a href="https://www.finops.org/" target="_blank" class="link-card">
+      <strong>🌎 Site oficial</strong>
       <p>Conheça os pilares da fundação e os recursos disponíveis.</p>
-    </div>
+    </a>
 
-    <div class="link-card">
-      <a href="https://www.finops.org/join/" target="_blank">👥 Torne-se Membro da FinOps Foundation</a>
+    <a href="https://www.finops.org/join/" target="_blank" class="link-card">
+      <strong>👥 Torne-se Membro da FinOps Foundation</strong>
       <p>Junte-se à comunidade global e acesse conteúdos exclusivos</p>
-    </div>
+    </a>
 
-    <div class="link-card">
-      <a href="https://forms.gle/4mLLvVcJDg36fDc57" target="_blank">🇧🇷 Faça Parte da Comunidade Brasileira</a>
+    <a href="https://forms.gle/4mLLvVcJDg36fDc57" target="_blank" class="link-card">
+      <strong>🇧🇷 Faça Parte da Comunidade Brasileira</strong>
       <p>Tenha acesso ao Whatsapp e conheça as pessoas mais engajadas em FinOps do Brasil</p>
-    </div>
+    </a>
 
-    <div class="link-card">
-      <a href="https://forms.gle/L2VQ8NSos3jGuSaX9" target="_blank">🫡 Seja um Voluntário</a>
+    <a href="https://forms.gle/L2VQ8NSos3jGuSaX9" target="_blank" class="link-card">
+      <strong>🫡 Seja um Voluntário</strong>
       <p>Ajude a comunidade a crescer.</p>
-    </div>
+    </a>
 
-    <div class="link-card">
-      <a href="https://learn.finops.org/" target="_blank">🎓 Adquira sua Certificação</a>
+    <a href="https://learn.finops.org/" target="_blank" class="link-card">
+      <strong>🎓 Adquira sua Certificação</strong>
       <p>Acesse a plataforma oficial de aprendizado.</p>
-    </div>
-    <div class="link-card">
-      <a href="https://learn.finops.org/" target="_blank">🎲 Saiba mais sobre o FOCUS</a>
+    </a>
+
+    <a href="https://focus.finops.org/" target="_blank" class="link-card">
+      <strong>🎲 Saiba mais sobre o FOCUS</strong>
       <p>Nossa especificação técnica que normaliza as faturas de tecnologia.</p>
-    </div>
-  
-    <div class="link-card">
-      <a href="https://jobs.finops.org/" target="_blank">💼 Procurando um Trabalho?</a>
+    </a>
+
+    <a href="https://jobs.finops.org/" target="_blank" class="link-card">
+      <strong>💼 Procurando um Trabalho?</strong>
       <p>Veja as oportunidades e envie vagas gratuitamente.</p>
-    </div> 
+    </a>
   </div>
 
   <section class="event-carousel">
@@ -169,7 +174,7 @@
           <p>Belo Horizonte FinOps Meetup - Julho</p>
         </a>
       </div>
-       <div class="card">
+      <div class="card">
         <a href="https://x.finops.org/x-days/sao-paulo/" target="_blank">
           <img src="https://events.finops.org/wp-content/uploads/2025/02/X-Day-SP.png" alt="X Days">
           <p>FinOps X Days</p>
@@ -187,7 +192,6 @@
           <p>Brazil July FinOps Foundation Summit</p>
         </a>
       </div>
-     
     </div>
   </section>
 
