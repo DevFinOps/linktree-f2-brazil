@@ -1,203 +1,213 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FinOps Brazil - Links Importantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linktree FinOps Brasil</title>
   <style>
+    :root {
+      --bg-color: #192730;
+      --card-bg: #ffffff;
+      --text-color: #ffffff;
+      --accent: #49C794;
+      --shadow: rgba(0, 0, 0, 0.2);
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #000;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     header {
-      background-color: #182630;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
+  text-align: center;
+  padding: 10px 20px 10px;
+}
 
     header h1 {
-      margin: 0;
+      color: var(--accent);
       font-size: 2rem;
-      color: #49C794;
     }
 
-    .container {
+    .linktree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
       max-width: 600px;
-      margin: 30px auto;
-      padding: 0 20px;
+      padding: 20px;
     }
 
-    a.link-card {
-      display: block;
-      background-color: #fff;
-      border-left: 8px solid #0080B0;
-      padding: 16px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      transition: transform 0.2s;
+    .linktree a {
+      width: 100%;
       text-decoration: none;
-      color: inherit;
+      margin: 10px 0;
     }
 
-    a.link-card:hover {
-      transform: scale(1.02);
-      background-color: #f0f0f0;
-    }
-
-    .link-card strong {
-      display: block;
+    .card {
+      background-color: var(--card-bg);
+      color: #000;
+      padding: 16px 24px;
+      border-radius: 12px;
       font-size: 1.1rem;
-      margin-bottom: 6px;
       font-weight: bold;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px var(--shadow);
     }
 
-    .link-card p {
-      margin: 0;
-      color: #555;
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px var(--shadow);
     }
 
+    /* Carrossel de eventos */
     .event-carousel {
-      background-color: #182630;
+      width: 100%;
       padding: 40px 20px;
-      color: white;
+      background-color: var(--bg-color);
       text-align: center;
     }
 
     .event-carousel h2 {
-      font-size: 1.8rem;
+      color: var(--accent);
+      font-size: 1.5rem;
       margin-bottom: 20px;
-      color: #49C794;
     }
 
     .carousel {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
       gap: 16px;
+      overflow-x: auto;
+      padding: 10px;
       scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      padding-bottom: 10px;
       justify-content: center;
     }
 
-    .card {
-      background-color: #ffffff10;
-      border-radius: 16px;
-      min-width: 250px;
-      max-width: 250px;
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      overflow: hidden;
-      transition: transform 0.3s;
+    .carousel::-webkit-scrollbar {
+      height: 8px;
     }
 
-    .card img {
+    .carousel::-webkit-scrollbar-thumb {
+      background-color: var(--accent);
+      border-radius: 4px;
+    }
+
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ffffff15;
+      scroll-snap-align: start;
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s;
+    }
+
+    .carousel-item img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
 
-    .card p {
+    .carousel-item p {
+      margin: 0;
       padding: 10px;
+      color: var(--text-color);
       font-size: 0.95rem;
-      color: #ffffff;
     }
 
-    .card:hover {
+    .carousel-item:hover {
       transform: scale(1.03);
     }
 
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 30px auto 15px;
+      border: 3px solid var(--accent);
+    }
+
     footer {
-      background-color: #182630;
-      color: white;
-      text-align: center;
       padding: 20px;
       font-size: 0.9rem;
+      color: #cccccc;
+      text-align: center;
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <h1>🌐 Links Importantes - FinOps Foundation Brasil</h1>
-    <p>Confira os principais links que usamos durante nossos eventos da comunidade FinOps Foundation Brasil.</p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxNGIRZjuX-Wc-IIui2msy2fVBXgpX0n-U4A&s" alt="FinOps Logo" class="logo" />
+    <h1>FinOps Foundation Brasil</h1>
+    <p class="subtitle">Participe da comunidade Brasileira de FinOps 💚</p>
   </header>
 
-  <div class="container">
-    <a href="https://www.finops.org/" target="_blank" class="link-card">
-      <strong>🌎 Site oficial</strong>
-      <p>Conheça os pilares da fundação e os recursos disponíveis.</p>
+  <div class="linktree">
+    <a href="https://www.finops.org/" target="_blank">
+      <div class="card">🌐 Site oficial da FinOps Foundation</div>
     </a>
-
-    <a href="https://www.finops.org/join/" target="_blank" class="link-card">
-      <strong>👥 Torne-se Membro da FinOps Foundation</strong>
-      <p>Junte-se à comunidade global e acesse conteúdos exclusivos</p>
+    <a href="https://www.finops.org/join/" target="_blank">
+      <div class="card">🤝 Torne-se Membro</div>
     </a>
-
-    <a href="https://forms.gle/4mLLvVcJDg36fDc57" target="_blank" class="link-card">
-      <strong>🇧🇷 Faça Parte da Comunidade Brasileira</strong>
-      <p>Tenha acesso ao Whatsapp e conheça as pessoas mais engajadas em FinOps do Brasil</p>
+    
+    <a href="https://forms.gle/4mLLvVcJDg36fDc57" target="_blank">
+      <div class="card">🇧🇷 Participe da Comunidade Brasileira</div>
+    
+    <a href="https://forms.gle/L2VQ8NSos3jGuSaX9" target="_blank">
+      <div class="card">🫡 Seja um Voluntário</div>
     </a>
-
-    <a href="https://forms.gle/L2VQ8NSos3jGuSaX9" target="_blank" class="link-card">
-      <strong>🫡 Seja um Voluntário</strong>
-      <p>Ajude a comunidade a crescer.</p>
+    <a href="https://learn.finops.org/" target="_blank">
+      <div class="card">🎓 Adquira sua Certificação</div>
     </a>
-
-    <a href="https://learn.finops.org/" target="_blank" class="link-card">
-      <strong>🎓 Adquira sua Certificação</strong>
-      <p>Acesse a plataforma oficial de aprendizado.</p>
+    <a href="https://focus.finops.org/" target="_blank">
+      <div class="card">🎲 Saiba mais sobre o FOCUS</div>
     </a>
-
-    <a href="https://focus.finops.org/" target="_blank" class="link-card">
-      <strong>🎲 Saiba mais sobre o FOCUS</strong>
-      <p>Nossa especificação técnica que normaliza as faturas de tecnologia.</p>
-    </a>
-
-    <a href="https://jobs.finops.org/" target="_blank" class="link-card">
-      <strong>💼 Procurando um Trabalho?</strong>
-      <p>Veja as oportunidades e envie vagas gratuitamente.</p>
+    <a href="https://jobs.finops.org/" target="_blank">
+      <div class="card">💼 Procurando um Trabalho?</div>
     </a>
   </div>
 
   <section class="event-carousel">
     <h2>📅 Próximos Eventos da Comunidade</h2>
     <div class="carousel">
-      <div class="card">
+      <div class="carousel-item">
         <a href="https://events.finops.org/event/belo-horizonte-finops-meetup-july/" target="_blank">
           <img src="https://events.finops.org/wp-content/uploads/2025/05/meetup-featured-belohorizonte.png" alt="Belo Horizonte Meetup">
           <p>Belo Horizonte FinOps Meetup - Julho</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-item">
         <a href="https://x.finops.org/x-days/sao-paulo/" target="_blank">
-          <img src="https://events.finops.org/wp-content/uploads/2025/02/X-Day-SP.png" alt="X Days">
-          <p>FinOps X Days</p>
+          <img src="https://events.finops.org/wp-content/uploads/2025/02/X-Day-SP.png" alt="X Days SP">
+          <p>FinOps X Days - São Paulo</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-item">
         <a href="https://x.finops.org/" target="_blank">
           <img src="https://events.finops.org/wp-content/uploads/2024/11/X25-Featured-v1.png" alt="FinOps X">
           <p>FinOps X - Site Oficial</p>
         </a>
       </div>
-      <div class="card">
+      <div class="carousel-item">
         <a href="https://events.finops.org/event/brazil-july-finops-foundation-summit/" target="_blank">
           <img src="https://events.finops.org/wp-content/uploads/2025/01/Virtual-Summit-Brazil-July25-Featured-v1.png" alt="Summit Julho">
-          <p>Brazil July FinOps Foundation Summit</p>
+          <p>Brazil July FinOps Summit</p>
         </a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>🌱 Esta página foi criada pela comunidade FinOps Brasil para facilitar o acesso aos recursos e eventos. Contribua, participe e compartilhe! 💚</p>
+    Desenvolvido com 💚 pelo time DevFinOps da comunidade Brasileira.
   </footer>
-</body>
 
+</body>
 </html>
