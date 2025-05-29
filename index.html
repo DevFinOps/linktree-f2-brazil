@@ -25,7 +25,7 @@
 
     header {
   text-align: center;
-  padding: 10px 20px 10px;
+  padding: 5px 15px 5px;
 }
 
     header h1 {
@@ -40,12 +40,15 @@
       width: 100%;
       max-width: 600px;
       padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+
     }
 
     .linktree a {
       width: 100%;
       text-decoration: none;
-      margin: 10px 0;
+      margin: 10px;
     }
 
     .card {
@@ -80,12 +83,16 @@
     }
 
     .carousel {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      padding: 10px;
-      scroll-snap-type: x mandatory;
-      justify-content: center;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px 0; /* removido o padding lateral */
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start;
+  scroll-padding-left: 16px; /* define onde o snap começa */
+}
+    .carousel-wrapper {
+      padding: 0 16px;
     }
 
     .carousel::-webkit-scrollbar {
@@ -124,6 +131,17 @@
     .carousel-item:hover {
       transform: scale(1.03);
     }
+
+    @media (min-width: 768px) {
+  .carousel-wrapper {
+    padding: 0; /* remove padding lateral no desktop */
+  }
+
+  .carousel {
+    justify-content: center; /* centraliza os cards no desktop */
+    scroll-padding-left: 0;  /* remove ajuste do snap lateral */
+  }
+}
 
     .logo {
       width: 120px;
@@ -177,6 +195,8 @@
 
   <section class="event-carousel">
     <h2>📅 Próximos Eventos da Comunidade</h2>
+    <div class="carousel-wrapper">
+    
     <div class="carousel">
       <div class="carousel-item">
         <a href="https://events.finops.org/event/belo-horizonte-finops-meetup-july/" target="_blank">
@@ -202,6 +222,7 @@
           <p>Brazil July FinOps Summit</p>
         </a>
       </div>
+    </div>
     </div>
   </section>
 
